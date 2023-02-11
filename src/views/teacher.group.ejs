@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body class="body" style="background-color: #EBEDF5;">
+    
+
+
+    <div class="container-fluid p-0 d-flex">
+
+
+        <div class="navbarr" style="height: 100vh; background: #363740;">
+            <div class="d-flex align-items-center justify-content-between border-2 border-bottom mx-auto p-4" style="width: 247px;">
+                <h2 class="text-white">CRM <br> PANEL</h1>
+            </div>
+
+            <ul class="list-unstyled m-0 mt-4">
+                <a href="/personal/teacher" class="text-decoration-none p-3 d-flex item align-items-center gap-3" style="padding-left: 28px;">
+                    <p class="m-0 text-white fw-bold ps-2">O'qituvchi</p>
+                </a>
+
+                <a href="/student/group" class="text-decoration-none p-3 d-flex item align-items-center gap-3" style="padding-left: 28px;">
+                    <p class="m-0 text-white fw-bold ps-2">Group</p>
+                </a>
+            </ul>
+            
+        </div>
+
+
+        <div class="w-100">
+
+            <div class="nav p-3 pe-5 d-flex justify-content-between align-items-center bg-white">
+                <h2 class="head">Students</h2>
+                <p class="p-0 time"><%= time %> </p>
+                <div class="gap-3 d-flex">
+                    <img src="../assets/img/Group 40.svg" alt="">
+                    <img src="../assets/img/Group 42.svg" alt="">
+                </div>
+            </div>
+
+
+            <ul class="list-unstyled p-3 ms-4" style="width: 600px;">
+
+                <li class="" style="background: #59595C; border-radius: 10px;">
+                    <a class="p-3 d-flex w-100 justify-content-between text-decoration-none" href="">
+                        <p class="text-white m-0">#</p>
+                        <p class="text-white m-0">O'quvchini ismi</p>
+                    </a>
+                </li>
+
+                <% student.map(e => { %>
+                    <li class="asfdg my-2  text-dark" style="background: #fff; border-radius: 10px;">
+                        <a class="p-3 d-flex w-100 justify-content-between text-decoration-none" href="">
+                            <p class="text-dark m-0"><%= e.id %> </p>
+                            <p class="text-dark m-0 "><%= e.userName %> </p>
+                        </a>
+                    </li>
+                <% }) %> 
+
+
+
+            </ul>
+
+
+            <!-- <div class="box">
+                <h1 class="new-team">Hometask</h1>
+
+                <table class="table table-striped scrol">
+                    <thead>
+                      <tr>
+                        <th>O'quvchilar</th>
+                        <th>Role</th>
+                        <th>Telefon</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     
+                    </tbody>
+                  </table> -->
+
+                
+
+
+               <div class="mx-4">
+                <!-- <form action="/personal/teacher" method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="">
+                        <div class="box-2">
+                            <p class="spn">Uyga Vazifa Berish</p>
+                            <input class="inp-inp" style="width: 1000px; height: 200px;" name="hometask" placeholder="Homework Assignments" autocomplete="off" required>
+
+                            </input>
+                        </div>
+                        
+                        <div>
+                            <button class="button-2 m-0 mt-3" style="width: 1000px; height: 200px; height: 50px; ">Send</button>
+                        </div>
+                    </div>
+                </form> -->
+               </div>
+               
+                      
+                    
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+</html>

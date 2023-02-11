@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "groupName": "n28",
+        "courseName": "web-dasturlash",
+        "teacherName": "Abdulatifxon"
+    },
+    {
+        "id": 2,
+        "groupName": "n10",
+        "courseName": "Python",
+        "teacherName": "Baxtiyor"
+    },
+    {
+        "id": 3,
+        "groupName": "n26",
+        "courseName": "Backend",
+        "teacherName": "Baxtiyor"
+    }
+]

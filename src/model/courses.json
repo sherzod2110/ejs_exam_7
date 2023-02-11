@@ -1,0 +1,14 @@
+[
+    {
+        "id": 4,
+        "courseName": "Backend",
+        "description": "10000",
+        "price": "Zur"
+    },
+    {
+        "id": 5,
+        "courseName": "Web dasturlash",
+        "description": "1000",
+        "price": "Vapshi malades"
+    }
+]

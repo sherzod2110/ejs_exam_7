@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "userName": "Admin",
+        "password": 10,
+        "role": "admin"
+    },
+    {
+        "id": 4,
+        "userName": "Sherzod",
+        "password": "3",
+        "role": "student",
+        "groupId": 1,
+        "tel": "+998 90 608 22 80",
+        "guruhi": "2"
+    },
+    {
+        "id": 5,
+        "userName": "Nodir",
+        "password": "5",
+        "role": "student",
+        "groupId": 2,
+        "tel": "+998 90 123 98 89",
+        "guruhi": "1"
+    },
+    {
+        "id": 6,
+        "userName": "Baxtiyor",
+        "password": "1",
+        "vaqti": "7-00 : 9-00",
+        "role": "teacher",
+        "tel": "+998 90 123 45 67",
+        "teacherYunalish": "Backend"
+    },
+    {
+        "id": 7,
+        "userName": "Abdulatifxon",
+        "password": "1234",
+        "vaqti": "17-00 : 19-00",
+        "role": "teacher",
+        "tel": "+998 90 321 44 55",
+        "teacherYunalish": "Frontend"
+    },
+    {
+        "id": 8,
+        "userName": "Toshmat",
+        "password": "3245",
+        "role": "student",
+        "tel": "+998 700 55 33 22",
+        "guruhi": "2"
+    },
+    {
+        "id": 9,
+        "userName": "Shermat",
+        "password": "2345465",
+        "role": "student",
+        "tel": "+998 333 33 33",
+        "guruhi": "1"
+    },
+    {
+        "id": 10,
+        "userName": "Sherali",
+        "password": "435",
+        "role": "student",
+        "tel": "+998 333 333 33",
+        "guruhi": "3"
+    },
+    {
+        "id": 11,
+        "userName": "Mukhriddin",
+        "password": "32412",
+        "vaqti": "11-00 : 13-00",
+        "role": "teacher",
+        "tel": "+998 33 222  33 44",
+        "teacherYunalish": "React js"
+    },
+    {
+        "id": 12,
+        "userName": "Quvonchbek",
+        "password": "34224",
+        "vaqti": "7-00 : 9-00",
+        "role": "teacher",
+        "tel": "+998 97 777 77 77",
+        "teacherYunalish": "Backend"
+    }
+]

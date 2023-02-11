@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body class="body">
+    
+
+
+    <div class="container-fluid p-0 d-flex">
+
+
+        <div class="navbarr" style="height: 900px !important;">
+            <div class="d-flex align-items-center justify-content-between border-2 border-bottom mx-auto p-4" style="width: 247px;">
+                <img src="../assets/img/user.svg" alt="" width="48" height="48">
+                <h2 class="heading">CRM <br> PANEL</h1>
+                    <img src="../assets/img/menu.svg" alt="" width="40" height="40">
+            </div>
+
+            <ul class="list-unstyled m-0 mt-4">
+                <a href="/xisobot" class="text-decoration-none d-flex item align-items-center gap-3" style="padding-left: 28px;">
+                    <img src="../assets/img/Home.svg" alt="" width="26" height="26">
+                    <p class="m-0">Xisobot</p>
+                </a>
+
+                <a href="/admins" class="text-decoration-none d-flex item align-items-center gap-3" style="padding-left: 28px;">
+                    <img src="../assets/img/users-solid 1.svg" alt="" width="26" height="26">
+                    <p class="m-0">Guruhlar</p>
+                </a>
+
+                <a href="/courses" class="text-decoration-none d-flex item align-items-center gap-3" style="padding-left: 28px;">
+                    <img src="../assets/img/credit-card-solid 1.svg" alt="" width="26" height="26">
+                    <p class="m-0">Kurslar</p>
+                </a>
+
+                <a href="/admin/teacher" class="text-decoration-none d-flex item align-items-center gap-3" style="padding-left: 28px;">
+                    <img src="../assets/img/user.svg" alt="" width="26" height="26">
+                    <p class="m-0">O'qituvchi</p>
+                </a>
+
+                <a href="/admin/student" class="text-decoration-none d-flex item align-items-center gap-3" style="padding-left: 28px;">
+                    <img src="../assets/img/graduation-cap-solid 1 (1).svg" alt="" width="26" height="26">
+                    <p class="m-0">O'quvchilar</p>
+                </a>
+            </ul>
+            
+        </div>
+
+
+        <div class="w-100">
+
+            <div class="nav p-3 pe-5 d-flex justify-content-between align-items-center">
+                <h2 class="head">Guruhlar</h2>
+                <p class="p-0 time"><%= time %> </p>
+                <div class="gap-3 d-flex">
+                    <img src="../assets/img/Group 40.svg" alt="">
+                    <img src="../assets/img/Group 42.svg" alt="">
+                </div>
+            </div>
+
+            <div class="box">
+                <h1 class="new-team">Yangi guruh qo’shish</h1>
+
+                <form action="/admins" method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="d-flex gap-4">
+                        <div class="box-2">
+                            <p class="spn">Guruh nomi</p>
+                            <input class="inp-inp" type="text" name="groupName" placeholder="N18 Masalan" required autocomplete="off">
+                        </div>
+    
+                        <div class="box-2">
+                            <p class="spn">Guruh yunalishi</p>
+                            <select class="inp-inp" placeholder="courseName" name="courseName" required>
+                                <option value="" disabled selected> Guruh Yunalishi </option>
+                                <% courses.map((e,i) => { %>
+                                    <option> <%= e.courseName %> </option>
+                                  <% }) %> 
+                            </select>
+                        </div>
+    
+                        <div class="box-2">
+                            <p class="spn">O'qituvchi</p>
+                            <select class="inp-inp" placeholder="teacherName" name="teacherName" required>
+                                <option value="" disabled selected> O'qituvchi </option>
+                                <% teachers.map(el => { %>
+                                    <option><%= el.userName %> </option>
+                                  <% }) %> 
+                            </select>
+                        </div>
+
+                        
+                    </div>
+                    <button class="button-2">Qo’shish</button>
+                </form>
+
+
+                <h1 class="pt-4 new-team">Mavjud Guruhlar</h1>
+              
+
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Guruh nomi</th>
+                        <th>Kurs nomi</th>
+                        <th>O’qituvchisi</th>
+                        <th>Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% allGroups.forEach(e => { %>
+                        <tr>
+                          <td><%= e.groupName %> </td>
+                          <td><%= e.courseName %> </td>
+                          <td><%= e.teacherName %> </td>
+                          <td>
+                            <form action="/admin/group-delete" method="post">
+                                 <button class="btn btn-danger" id="<%= e.id %> ">Delete</button>
+                            </form>
+                          </td>
+                        </tr>
+                      <% }) %>
+                    </tbody>
+                  </table>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+</html>
